@@ -1,0 +1,7 @@
+1. If application data have tree like structure(one to many ) and not too nested then use document based db but if the data having many to many and many to one relationships then better idea is to use sql (Relational DB)
+2. The idea of ddocument db  came from that if i am using object oriented programming language then ii have to use an layer that will translate the data to my application object called ORM but still at manual level we have to do
+3. Document DB is often called schemaless it doesn’t mean that it will not have any schema it will have implict schema but that is not forced to db called schema on read while Realtional db have explict schema often called schema on write
+4. Suppose you have to change your db structure to store one more field in document db it will be easy just create new docs and using it but in Relational DB we will have to run ALTER and UPDATE (for very previous data) . ALTER is cheap with SQL(excpetion) but UPDATE is very expensive.
+5. Data Locality :- Related data are stored together. But it is useful when large amount of data in document . Evenn google spanner is having similar properties even in relational db just having rows should be interleaved.
+6. Declarative vs imperative means in SQL we just write what data we want in which format and in what order but in imperative all we have to do by ourself. 
+7. if Many to many relationship is there it best to have relational db but what if we have growing complexities then ? in that case better to move to graph model
